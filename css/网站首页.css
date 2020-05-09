@@ -1,0 +1,539 @@
+html,body{
+    box-sizing: border-box;  /*加上了后面排版方便一点*/
+    width: 100%;
+    margin: 0;
+}
+
+a{
+    color:black;
+    text-decoration: none; /* 去掉a标签的下划线*/
+}
+
+/* 有背景图的那个盒子 */
+#top{
+    width: 1150px;
+    height: 590px;
+    margin: 0 auto;
+    border: 0px solid black;
+    background-size: cover;
+    background-image: url(../images/bg.png);
+}
+
+/* 搜索栏,耳朵,菜单栏的外层盒子,边框border不能为0px,否则排版会乱掉 */
+#top .head{
+    width: 1000px;
+    height: 185px;
+    margin: 40px auto;
+    border: 2px solid transparent; /*transparent表示透明边框*/
+}
+
+/* 头栏样式 */
+#header{
+    width: 1150px;
+    height: 32px;
+    /* display: inline-block; */
+    margin: 0px auto;
+    background-color: #FFF5E4;
+    /* border: 4px solid red; */
+}
+#header div:nth-child(1){
+    float: left;
+    width: 150px;
+    height: 32px;
+    line-height: 32px;
+    /* background-color: #09d475; */
+}
+#header div:nth-child(2){
+    float: right;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+}
+#header div:nth-child(3){
+    float: right;
+    width: 50px;
+    height: 32px;
+    line-height: 32px;
+}
+
+#top .main{
+    position: relative;
+    width: 910px;
+    margin: -80px auto;
+    border: 3px solid #D5A951;
+    background-color: rgba(255, 245, 228, 0.7); /* 透明度为0.7*/
+}
+
+/* logo的样式 */
+#logo{
+    width: 200px;
+    height: 100px;
+    margin-top: -24px;
+    margin-left: 50px;
+    background-color: #FFF5E4;
+    border: 3px solid #FFF5E4;
+}
+
+/* logo右边的div盒子的样式 */
+.head #bar{
+    width: 740px;
+    height: 187px;
+    margin-top: -130px;
+    margin-left: 292px ;
+    font-size: 0px;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+/* 搜索框样式 */
+#top .head #bar input[type=text]{
+    box-sizing: border-box;
+    width: 400px;
+    height: 40px;
+    margin-top: 35px;
+    margin-left: 160px;
+    border: 3px solid white;
+    outline: none; /*去除浏览器选中状态默认边框*/
+    vertical-align: top;
+}
+
+/* 按钮样式 */
+#top .head #bar button{
+    width: 62px;
+    height: 40px;
+    margin-top: 35px;
+    font-size: 20px;
+    font-family: "楷体";
+    outline: none;
+    background-color: #AEE48D;
+    border: 2px solid #AEE48D;
+}
+
+/* 放四个耳朵的盒子的样式 */
+ #ear div{
+    width: 135px;
+    height: 50px;
+    display: inline-block;
+    margin: 22px 38px -35px -10px;
+    position: relative;
+    background: center;
+    border: 1px solid transparent;
+}
+#ear div:nth-child(1){
+    /* background-color:s #ff000d; */
+    /* z-index: 3; */
+    background-image: url(../images/ear1.png);
+    background-size: cover; /* 图片平铺/*/
+}
+#ear div:nth-child(2){
+    background-image: url(../images/ear2.png);
+    background-size: cover;
+}
+#ear div:nth-child(3){
+    background-image: url(../images/ear3.png);
+    background-size: cover;
+}
+#ear div:nth-child(4){
+    background-image: url(../images/ear4.png);
+    background-size: cover;
+}
+
+/* 菜单栏样式 */
+#menu{
+    width: 112px;
+    height: 0px; /*不能漏*/
+    display: inline-block;
+    margin-top: 33px;
+    margin-left: 0px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "幼圆";
+    white-space:nowrap; /*是文本强制一行显示*/
+    /* border: 1px solid red; */
+    /* 画直角梯形 */
+    border-left: 17px solid #FDFBF6;
+    border-right: 37px solid transparent;
+    border-bottom: 45px solid #FDFBF6;
+}
+#menu div{
+    width: 62px;
+    height: 25px;
+    text-align: center;
+}
+/* 菜单栏栏的a标签样式 */
+#a{
+    display: block;
+    line-height: 47px;
+
+    text-decoration: none; /*去掉下划线*/
+}
+
+/* 用户头像区域 */
+#user{
+    width: 250px;
+    height: 240px;
+    margin-top: -3px;
+    margin-left: -3px;
+    border: 3px solid #D5A951;
+    background-color: #FFF5E4;
+}
+#user div:nth-child(1){
+    width: 125px;
+    height: 125px;
+    margin: 10px auto;
+    background-color: #39ec57;
+    border-radius: 100%;
+}
+#user div:nth-child(2){
+    text-align: center;
+    margin: 18px auto;
+    font-family: "楷体";
+}
+#user div:nth-child(3){
+    text-align: center;
+}
+input[type=button]{
+    width: 50px;
+    height: 25px;
+    background-color: #F2D8A6;
+}
+#user img{
+    width: 125px;
+    height: 124px;
+    overflow: hidden; /*超出部分隐藏*/
+    border-radius: 100%;
+}
+
+/* 轮播图区域 */
+#wheel{
+    width: 658px;
+    height: 239px;
+    margin-top: -245px;
+    margin-left: 249px;
+    background-color: #FFF5E4;
+    border: 3px solid #D5A951;
+}
+
+/* 下面都都是是轮播图的代码 */
+/* 放轮播图效果的框 */
+.container {
+    width: 448px;
+    height: 240px;
+    overflow: hidden;
+    margin-top: -2px;
+    margin-left: 104px;
+    border: 1px solid #D5A951;
+}
+/* 放轮播图片的框 */
+.photo {
+    width: 1800px;
+    height: 240px;
+    animation: switch 10s ease-out infinite;
+    background-size: cover;
+}
+
+.photo>img {
+    float: left;
+    width: 450px;
+    height: 240px;
+}
+/*@keyframes 规则用于创建动画*/
+@keyframes switch {
+    0%,20% {
+        margin-left: 2;
+    }
+    30%,50% {
+        margin-left: -453px;
+    }
+    60%,80% {
+        margin-left: -903px;
+    }
+    90%,100% {
+        margin-left: -1350px;
+    }
+}
+
+ul{
+    width: 100%;
+    margin: 0 -42px;
+}
+ul>li{
+    width: 100%;
+    height: 360px;
+    list-style: none;
+    font-family: "幼圆";
+    border: 2px solid transparent;
+}
+.title{
+    width: 95%;
+    height: 60px;
+    margin: auto;
+    border-bottom: 2px solid #b9ac8a;
+}
+
+.title>div{
+    float: right;
+    font-size: 28px;
+    font-style: italic;
+    line-height: 65px;
+    margin-right: 20px;
+}
+
+.title div:nth-child(1){
+    float: left;
+    font-size: 40px;
+    font-family: "幼圆";
+    font-style: italic;
+    line-height: 55px;
+    margin-left: 15px;
+}
+.title div:last-child{
+    font-style: normal;
+    color: #fa3e4b;
+}
+.knowledge{
+    float: left;
+    width: 420px;
+    height: 220px;
+    font-size: 23px;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    border: 1px solid transparent;
+}
+
+.knowledge div:nth-child(1){
+    float: left;
+    width: 100px;
+    height: 40px;
+}
+.knowledge div:nth-child(2){
+    float: right;
+    width: 100px;
+    height: 40px;
+}
+.aa{
+    color: blue;
+}
+.knowledge img{
+    float: left;
+    width: 240px;
+    height: 180px;
+    margin-right: 10px;
+}
+
+.clearfix{
+    content: "";
+    display: block;
+    clear: both;
+}
+.knowledge div:nth-child(3){
+    width: 100%;
+    height: 180px;
+    font-size: 18px;
+    border: 1px solid transparent;
+}
+.separate{
+    width: 1px;
+    height: 220px;
+    margin-top: 40px;
+    margin-left: 450px;
+    background-color: #e5cc9a;
+    border: 2px solid #e5cc9a;
+}
+.d_line{
+    width: 95%;
+    height: 5px;
+    margin: 10px auto;
+    border-top: 2px solid #e5cc9a;
+    border-bottom: 2px solid #e5cc9a;
+}
+
+.shopping{
+    float: left;
+    width: 232px;
+    height: 220px;
+    margin-top: 30px;
+    margin-left: 40px;
+    border: 1px solid transparent;
+}
+
+.shopping>img{
+    width: 100%;
+    height: 75%;
+}
+
+.shopping>div{
+    float: left;
+    width: 75px;
+    height: 30px;
+    /* margin-left: 0px; */
+    /* background-color: #39ec57; */
+}
+.shopping div:nth-child(2){
+    padding-left: 10px;
+    float:left;
+    font-size: 20px;
+    color: black;
+}
+
+.shopping div:nth-child(3){
+    font-size: 23px;
+    color: #fa3e4b;
+    margin-left: 70px;
+}
+.shopping div:nth-child(4){
+    font-size: 15px;
+    padding-left: 10px;
+    color: #5145fa;
+}
+.shopping div:nth-child(5){
+    font-size: 13px;
+    margin-left: 70px;
+}
+.more{
+    float: right;;
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+}
+/* .more>a{
+    color: blue;
+} */
+.d_line_s{
+    width: 95%;
+    height: 5px;
+    margin: 270px auto;
+    border-top: 2px solid #e5cc9a;
+    border-bottom: 2px solid #e5cc9a;
+}
+
+.show{
+    width: 95%;
+    height: 37%;
+    margin:auto;
+    border-bottom: 2px solid #f3dc9c;
+}
+ul>li:nth-of-type(3)>div:nth-child(3){
+    border-bottom: 2px solid transparent;
+}
+.show>div:nth-child(1){
+    float: left;
+    width: 120px;
+    height: 110px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 80px;
+    border-bottom: 3px solid transparent;
+}
+.show div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+}
+
+.show>a{
+    display: block;
+    width: 600px;
+    height: 30px;
+    font-size: 25px;
+    text-decoration: underline;
+    margin-top: 5px;
+    margin-left: 260px;
+    border: 2px solid transparent;
+}
+.show>p{
+    display: block;
+    width: 650px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 260px;
+}
+.show>div:nth-child(2){
+    width: 650px;
+    height: 40px;
+   
+}
+.show .information{
+    margin-top: -10px;
+}
+.show .information>div{
+    float: left;
+    margin-left: 8px;
+}
+.show .information>div:nth-child(1){
+    margin-left: 65px;
+}
+
+.show .information>div:nth-child(2){
+    margin-left: 340px;
+}
+.show>div:nth-of-type(3){
+    float: right;
+    width: 80px;
+    height: 25px;
+    font-size: 16px;
+    margin-right: -5px;
+    color: blue;
+   
+}
+
+/* 医疗美容 */
+.show2{
+    width: 95%;
+    height: 140px;
+    margin: 2px auto;
+    border-bottom: 2px solid #f3dc9c;
+}
+.show2>div{
+    float: left;
+}
+.show2+div{
+    border-bottom: 2px solid transparent;
+}
+.show2>div:nth-child(1){
+    width: 200px;
+    height: 120px;
+    margin: 2px 70px 0px 50px;
+    border: 2px solid #ec3984;
+}
+.show2>div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+}
+.show2>div:nth-child(2)>h3{
+    margin-top: 5px;
+}
+.show2>div:nth-child(2)>p{
+    margin-top: -10px;
+}
+.show2>div:nth-child(2)>p+div{
+    width: 100%;
+    height: 0.05em;
+    margin-top:-5px;
+    background-color: #fdbfd9;
+    border: 1px solid #fdbfd9;
+}
+.price>div{
+    float: left;
+    margin: 5px 0px;
+}
+.price>div:nth-child(1){
+    width: 320px;
+    /* margin-right: 100px; */
+}
+.price>div:nth-child(2){
+    width: 130px;
+    color: #fa3e4b;
+}
+.last_a{
+    float: right;
+    margin-top: -20px;
+    font-size: 20px;
+}
+.laster{
+    clear: both;
+    width: 120px;
+    font-size: 20px;
+    margin: 20px auto;
+    
+}
